@@ -8,7 +8,5 @@ public class meta_map {
 	public final static String accountVerificationPopup = "//*[@aria-labelledby]//*[contains(text(), 'Is this your account?')]";
 	public final static String verificationButton = "//button[contains(text(), 'Yes, Continue')]";
 	public final static String userAccount = "//div[@aria-label='Account Controls and Settings']//*[@aria-label='Your profile']";
-	
-	
-	
+
 }

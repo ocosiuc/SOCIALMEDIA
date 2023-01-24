@@ -9,19 +9,9 @@ public class insta_map {
 	public final static String loginButton = "//div[contains(text(), 'Log ')]";
 	public final static String notNowButton = "//div//button[contains(text(),'Not Now')]";
 	public final static String notNowDialog = "//*[@role='dialog']//button[contains(text(),'Not Now')]";
-	
-	public final static String userAccount (String user) {
-		return "//div/div/a[contains(text(), "+user+")]";
+
+	public final static String userAccount(String user) {
+		return "//div/div/a[contains(text(), " + user + ")]";
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }
