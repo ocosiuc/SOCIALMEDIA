@@ -93,110 +93,15 @@ public class DataTable {
 			System.out.println("The test case \"" + currentTestcase + "\"" + "is not found in the test data sheet \""
 					+ datasheetName + "\"!");
 		}
-//		rowNum = testDataAccess.getRowNum(Integer.toString(currentIteration), 1, rowNum);
-//		if (rowNum == -1) {
-//			System.out.println("The iteration number \"" + currentIteration + "\"" + "of the test case \""
-//					+ currentTestcase + "\"" + "is not found in the test data sheet \"" + datasheetName + "\"!");
-//		}
-//		// if (properties.getProperty("Approach").equalsIgnoreCase("KeywordDriven")) {
-//		rowNum = testDataAccess.getRowNum(Integer.toString(currentSubIteration), 2, rowNum);
-//		if (rowNum == -1) {
-//			System.out.println("The sub iteration number \"" + currentSubIteration + "\"" + "under iteration number \""
-//					+ currentIteration + "\"" + "of the test case \"" + currentTestcase + "\""
-//					+ "is not found in the test data sheet \"" + datasheetName + "\"!");
-//		}
-		// }
 
 		String dataValue = testDataAccess.getValue(rowNum, fieldName);
 
-//		if (dataValue.startsWith(dataReferenceIdentifier)) {
-//			dataValue = getCommonData(fieldName, dataValue);
-//		}
 
 		return dataValue;
 	}
 
-//	private String getCommonData(String fieldName, String dataValue) {
-//		ExcelDataAccess commonDataAccess = new ExcelDataAccess(datatablePath,
-//				"Common Testdata");
-//		commonDataAccess.setDatasheetName("Common_Testdata");
-//
-//		String dataReferenceId = dataValue.split(dataReferenceIdentifier)[1];
-//
-//		int rowNum = commonDataAccess.getRowNum(dataReferenceId, 0, 1); // Start
-//																		// at
-//																		// row
-//																		// 1,
-//																		// skipping
-//																		// the
-//																		// header
-//																		// row
-//		if (rowNum == -1) {
-//			System.out.println(
-//					"The common test data row identified by \""
-//							+ dataReferenceId + "\""
-//							+ "is not found in the common test data sheet!");
-//		}
-//
-//		return commonDataAccess.getValue(rowNum, fieldName);
-//	}
 
-	/**
-	 * Function to output intermediate data (output values) into the specified sheet
-	 * 
-	 * @param datasheetName The name of the sheet into which the data is to be
-	 *                      written
-	 * @param fieldName     The name of the field into which the data is to be
-	 *                      written
-	 * @param dataValue     The value to be written into the field specified
-	 * @see #getData(String, String)
-	 */
-//	public void putData(String datasheetName, String fieldName, String dataValue) {
-//		checkPreRequisites();
-//
-//		ExcelDataAccess testDataAccess = new ExcelDataAccess(datatablePath,
-//				datatableName);
-//		testDataAccess.setDatasheetName(datasheetName);
-//
-//		int rowNum = testDataAccess.getRowNum(currentTestcase, 0, 1); // Start
-//																		// at
-//																		// row
-//																		// 1,
-//																		// skipping
-//																		// the
-//																		// header
-//																		// row
-//		if (rowNum == -1) {
-//			System.out.println("The test case \"" + currentTestcase
-//					+ "\"" + "is not found in the test data sheet \""
-//					+ datasheetName + "\"!");
-//		}
-//		rowNum = testDataAccess.getRowNum(Integer.toString(currentIteration),
-//				1, rowNum);
-//		if (rowNum == -1) {
-//			System.out.println("The iteration number \""
-//					+ currentIteration + "\"" + "of the test case \""
-//					+ currentTestcase + "\""
-//					+ "is not found in the test data sheet \"" + datasheetName
-//					+ "\"!");
-//		}
-//		if (properties.getProperty("Approach").equalsIgnoreCase("KeywordDriven")) {
-//			rowNum = testDataAccess.getRowNum(
-//					Integer.toString(currentSubIteration), 2, rowNum);
-//			if (rowNum == -1) {
-//				System.out.println("The sub iteration number \""
-//						+ currentSubIteration + "\""
-//						+ "under iteration number \"" + currentIteration + "\""
-//						+ "of the test case \"" + currentTestcase + "\""
-//						+ "is not found in the test data sheet \""
-//						+ datasheetName + "\"!");
-//			}
-//		}
-//
-//		synchronized (DataTable.class) {
-//			testDataAccess.setValue(rowNum, fieldName, dataValue);
-//		}
-//	}
+	
 
 	/**
 	 * Function to get the expected result corresponding to the field name passed

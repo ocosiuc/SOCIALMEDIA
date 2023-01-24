@@ -1,9 +1,5 @@
 package framework;
 
-//import java.util.List;
-//import framework.TestParameters;
-//import framework.DriverScript;
-//import framework.FrameworkParameters;
 
 /**
  * Class to facilitate parallel execution of test scripts
