@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import framework.ReusableLibrary;
 import framework.ScriptHelper;
-import uimap.meta_map;
+import sample_Project.uimap.meta_map;
 
 public class Facebook_Keywords extends ReusableLibrary {
 
@@ -27,7 +27,7 @@ public class Facebook_Keywords extends ReusableLibrary {
 				driver.findElement(By.xpath(meta_map.password)).sendKeys(properties.getProperty("f_password"));
 				driver.findElement(By.xpath(meta_map.loginButton)).click();
 
-				Thread.sleep(1000);
+				Thread.sleep(6000);
 
 				if (waitForAnElementToBeDisplayed(By.xpath(meta_map.accountVerificationPopup))) {
 					driver.findElement(By.xpath(meta_map.verificationButton)).click();

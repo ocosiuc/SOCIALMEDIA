@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import framework.ReusableLibrary;
 import framework.ScriptHelper;
-import uimap.insta_map;
+import sample_Project.uimap.insta_map;
 
 public class Instagram_Keywords extends ReusableLibrary{
 
@@ -23,9 +23,9 @@ public class Instagram_Keywords extends ReusableLibrary{
 			driver.manage().window().maximize();
 			Thread.sleep(1000);
 
-			if (driver.getTitle().equals("Login • Instagram")) {
-				driver.findElement(insta_map.username).sendKeys(properties.getProperty("i_username"));
-				driver.findElement(insta_map.password).sendKeys(properties.getProperty("i_password"));
+			if (driver.getTitle().equals("Login ï¿½ Instagram")) {
+				driver.findElement(By.xpath(insta_map.username)).sendKeys(properties.getProperty("i_username"));
+				driver.findElement(By.xpath(insta_map.password)).sendKeys(properties.getProperty("i_password"));
 				driver.findElement(By.xpath(insta_map.loginButton)).click();
 
 				if (driver.findElements(By.xpath(insta_map.notNowButton)).size() == 1) {

@@ -1,4 +1,4 @@
-package uimap;
+package sample_Project.uimap;
 
 public class meta_map {
 
