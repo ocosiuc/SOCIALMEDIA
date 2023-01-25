@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import framework.ReusableLibrary;
 import framework.ScriptHelper;
-import uimap.twit_map;
+import sample_Project.uimap.twit_map;
 
 public class Twitter_Keywords extends ReusableLibrary{
 

@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import framework.ReusableLibrary;
 import framework.ScriptHelper;
-import uimap.meta_map;
+import sample_Project.uimap.meta_map;
 
 public class Facebook_Keywords extends ReusableLibrary {
 
