@@ -124,16 +124,7 @@ public class WebDriverFactory {
 	 *                       execution
 	 * @return The corresponding {@link RemoteWebDriver} object
 	 */
-	public static WebDriver getRemoteWebDriver(Browser browser, String browserVersion, Platform platform,
-			String remoteUrl) {
-		// For running RemoteWebDriver tests in Chrome and IE:
-		// The ChromeDriver and IEDriver executables needs to be in the PATH of the
-		// remote machine
-		// To set the executable path manually, use:
-		// java -Dwebdriver.chrome.driver=/path/to/driver -jar
-		// selenium-server-standalone.jar
-		// java -Dwebdriver.ie.driver=/path/to/driver -jar
-		// selenium-server-standalone.jar
+	public static WebDriver getRemoteWebDriver(Browser browser, String browserVersion, Platform platform, String remoteUrl) {
 
 		properties = Settings.getInstance();
 		boolean proxyRequired = Boolean.parseBoolean(properties.getProperty("ProxyRequired"));
@@ -269,14 +260,9 @@ public class WebDriverFactory {
 
 		Map<String, Object> mobileEmulation = new HashMap<String, Object>();
 		mobileEmulation.put("deviceMetrics", deviceMetrics);
-		// mobileEmulation.put("userAgent", "Mozilla/5.0 (Linux; Android 4.2.1; en-us;
-		// Nexus 5 Build/JOP40D) AppleWebKit/535.19 (KHTML, like Gecko)
-		// Chrome/18.0.1025.166 Mobile Safari/535.19");
 		mobileEmulation.put("userAgent", userAgent);
-
 		Map<String, Object> chromeOptions = new HashMap<String, Object>();
 		chromeOptions.put("mobileEmulation", mobileEmulation);
-
 		DesiredCapabilities desiredCapabilities = DesiredCapabilities.chrome();
 		desiredCapabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 		return desiredCapabilities;
@@ -294,14 +280,10 @@ public class WebDriverFactory {
 	 *                         execution
 	 * @return The corresponding {@link RemoteWebDriver} object
 	 */
-	public static WebDriver getEmulatedRemoteWebDriver(int deviceWidth, int deviceHeight, float devicePixelRatio,
-			String userAgent, String remoteUrl) {
-		DesiredCapabilities desiredCapabilities = getEmulatedChromeDriverCapabilities(deviceWidth, deviceHeight,
-				devicePixelRatio, userAgent);
+	public static WebDriver getEmulatedRemoteWebDriver(int deviceWidth, int deviceHeight, float devicePixelRatio, String userAgent, String remoteUrl) {
+		DesiredCapabilities desiredCapabilities = getEmulatedChromeDriverCapabilities(deviceWidth, deviceHeight, devicePixelRatio, userAgent);
 		desiredCapabilities.setJavascriptEnabled(true); // Pre-requisite for remote execution
-
 		URL url = getUrl(remoteUrl);
-
 		return new RemoteWebDriver(url, desiredCapabilities);
 	}
 

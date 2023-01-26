@@ -31,7 +31,7 @@ public class ParallelRunner implements Runnable {
 		return testBatchStatus;
 	}
 
-	@Override
+	//@Override
 	public void run() {
 		DriverScript driverScript = new DriverScript(this.testParameters);
 		TestParameters.currentTC = testParameters.getCurrentTestCase();

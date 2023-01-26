@@ -48,7 +48,6 @@ public class Settings {
 
 		if (frameworkParameters.getRelativePath() == null) {
 			System.out.println("FrameworkParameters.relativePath is not set!");
-			// throw new Exception("FrameworkParameters.relativePath is not set!");
 		}
 
 		Properties tempProperties = new Properties();
@@ -70,21 +69,15 @@ public class Settings {
 				if (!prj1.equalsIgnoreCase(prj2)) {
 					System.out.println(
 							"Project name in " + globalSettings + " and " + strSettingsFile + " are different");
-					// throw new Exception("Project name in " + globalSettings + " and " +
-					// strSettingsFile + " are different");
 				}
 			}
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			System.out.println("FileNotFoundException while loading the Global Settings file");
-			// throw new Exception("FileNotFoundException while loading the Global Settings
-			// file");
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.out.println("IOException while loading the Global Settings file");
-			// throw new FrameworkException("IOException while loading the Global Settings
-			// file");
 		}
 
 		return properties;
@@ -95,7 +88,6 @@ public class Settings {
 
 		if (frameworkParameters.getRelativePath() == null) {
 			System.out.println("FrameworkParameters.relativePath is not set!");
-			// throw new FrameworkException("FrameworkParameters.relativePath is not set!");
 		}
 
 		Properties properties = new Properties();
@@ -106,13 +98,9 @@ public class Settings {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			System.out.println("FileNotFoundException while loading the Mobile Automation Settings file");
-			// throw new FrameworkException("FileNotFoundException while loading the Mobile
-			// Automation Settings file");
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.out.println("IOException while loading the Mobile Automation Settings file");
-			// throw new FrameworkException("IOException while loading the Mobile Automation
-			// Settings file");
 		}
 
 		return properties;

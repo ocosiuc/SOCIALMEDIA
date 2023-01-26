@@ -75,8 +75,8 @@ public class Util {
 	 * @return The time difference in terms of hours, minutes and seconds
 	 */
 	public static String getTimeDifference(Date startTime, Date endTime) {
-		long timeDifferenceSeconds = (endTime.getTime() - startTime.getTime()) / 1000; // to convert from milliseconds
-																						// to seconds
+		long timeDifferenceSeconds = (endTime.getTime() - startTime.getTime()) / 1000;
+																						
 		long timeDifferenceMinutes = timeDifferenceSeconds / 60;
 
 		String timeDifferenceDetailed;

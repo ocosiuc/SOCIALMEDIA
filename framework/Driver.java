@@ -30,48 +30,10 @@ public class Driver {
 		this.testParameters = testParameters;
 	}
 
-//	public void setRport(SeleniumReport report) {
-//		this.report = report;
-//	}
-
 	public WebDriver getWebDriver() {
 		return driver;
 	}
 
-//	public boolean isPerfecto() {
-//		boolean isPerfecto = false;
-//		if (testParameters.getExecutionMode().toString().equals("PERFECTO")) {
-//			isPerfecto = true;
-//		}
-//		return isPerfecto;
-//
-//	}
-//
-//	public boolean isAppium() {
-//		boolean isAppium = false;
-//		if (testParameters.getMobileToolName().toString().equals("APPIUM")) {
-//			isAppium = true;
-//		}
-//		return isAppium;
-//	}
-//
-//	public boolean isDefaultPerfecto() {
-//		boolean isDefaultPerfecto = false;
-//		if (testParameters.getMobileToolName().toString().equals("DEFAULT")) {
-//			isDefaultPerfecto = true;
-//		}
-//		return isDefaultPerfecto;
-//	}
-//
-//	public boolean isSeeTest() {
-//		boolean isSeeTest = false;
-//		if (testParameters.getExecutionMode().toString().equals("SEETEST")) {
-//			isSeeTest = true;
-//		}
-//		return isSeeTest;
-//	}
-
-	// WebDriver Methods
 	/**
 	 * Function to close the driver Object {@link WebDriver}
 	 */
@@ -110,8 +72,6 @@ public class Driver {
 			element = driver.findElement(arg0);
 		} else {
 			System.out.println("Action Failed to Perform, please check the Locators.");
-			// report.updateTestLog("Action","Action Failed to Perform, please check the
-			// Locators",Status.FAIL);
 			element = null;
 		}
 		return element;
@@ -138,8 +98,6 @@ public class Driver {
 	 * Function to take screen shot and update in report {@link WebDriver}
 	 */
 	public void capture() {
-		// report.updateTestLog("Screen Shot", "Screen Shot Captured Successfuly",
-		// Status.SCREENSHOT);
 	}
 
 	/**

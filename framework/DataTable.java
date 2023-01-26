@@ -35,8 +35,6 @@ public class DataTable {
 	 */
 	public void setDataReferenceIdentifier(String dataReferenceIdentifier) {
 		if (dataReferenceIdentifier.length() != 1) {
-			// throw new FrameworkException("The data reference identifier must be a single
-			// character!");
 			System.out.println("The data reference identifier must be a single character!");
 		}
 
@@ -59,8 +57,6 @@ public class DataTable {
 
 	private void checkPreRequisites() {
 		if (currentTestcase == null) {
-			// throw new FrameworkException(
-			// "DataTable.currentTestCase is not set!");
 			System.out.println("DataTable.currentTestCase is not set!");
 		}
 	}
@@ -81,14 +77,7 @@ public class DataTable {
 		ExcelDataAccess testDataAccess = new ExcelDataAccess(datatablePath, datatableName);
 		testDataAccess.setDatasheetName(datasheetName);
 
-		int rowNum = testDataAccess.getRowNum(currentTestcase, 0, 1); // Start
-																		// at
-																		// row
-																		// 1,
-																		// skipping
-																		// the
-																		// header
-																		// row
+		int rowNum = testDataAccess.getRowNum(currentTestcase, 0, 1); 
 		if (rowNum == -1) {
 			System.out.println("The test case \"" + currentTestcase + "\"" + "is not found in the test data sheet \""
 					+ datasheetName + "\"!");
@@ -116,14 +105,7 @@ public class DataTable {
 		ExcelDataAccess expectedResultsAccess = new ExcelDataAccess(datatablePath, datatableName);
 		expectedResultsAccess.setDatasheetName("Parametrized_Checkpoints");
 
-		int rowNum = expectedResultsAccess.getRowNum(currentTestcase, 0, 1); // Start
-																				// at
-																				// row
-																				// 1,
-																				// skipping
-																				// the
-																				// header
-																				// row
+		int rowNum = expectedResultsAccess.getRowNum(currentTestcase, 0, 1);
 		if (rowNum == -1) {
 			System.out.println("The test case \"" + currentTestcase + "\""
 					+ "is not found in the parametrized checkpoints sheet!");
